@@ -1,4 +1,4 @@
-{% set version = '0.5.10' %}
+{% set version = '1.0.0' %}
 
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
@@ -11,7 +11,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyquant_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyquant/tidyquant_{{ version }}.tar.gz
-  sha256: 5d6e195ee122acb825f8911714e019c865d13ad044e82fac75d443527b7c98f5
+  sha256: eb20d62715911743c74e86b668379673dc737bc8b73b4dfe10ca29942ce50435
 
 build:
   merge_build_host: True  # [win]
@@ -48,6 +48,9 @@ requirements:
     - r-timetk
     - r-xml2
     - r-xts
+    - r-riingo
+    - r-alphavantager
+    - r-timedate
 
   run:
     - r-base
@@ -72,6 +75,9 @@ requirements:
     - r-timetk
     - r-xml2
     - r-xts
+    - r-riingo
+    - r-alphavantager
+    - r-timedate
 
 test:
   commands:
@@ -79,7 +85,7 @@ test:
     - $R -e "library('tidyquant')"           # [not win]
     - "\"%R%\" -e \"library('tidyquant')\""  # [win]
 
-about:
+about: 
   home: https://github.com/business-science/tidyquant
   license: MIT
   summary: Bringing financial analysis to the 'tidyverse'. The 'tidyquant' package provides a
@@ -90,7 +96,7 @@ about:
     website for more information, documentation and examples.
   license_family: MIT
   license_file:
-    - '{{ environ["PREFIX"] }}/lib/R/share/licenses/MIT'
+    - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
     - LICENSE
 
 extra:
