@@ -1,5 +1,4 @@
 {% set version = "1.0.2" %}
-
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -16,7 +15,7 @@ source:
 build:
   merge_build_host: true  # [win]
   number: 0
-
+  noarch: generic
   rpaths:
     - lib/R/lib/
     - lib/
@@ -24,64 +23,67 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
-
   host:
     - r-base
     - r-performanceanalytics
     - r-quandl
     - r-ttr
+    - r-alphavantager >=0.1.2
     - r-cli
     - r-crayon
-    - r-dplyr >=0.8.3
+    - r-curl
+    - r-dplyr >=1.0.0
     - r-ggplot2
     - r-httr
+    - r-janitor
     - r-lazyeval
     - r-lubridate
     - r-magrittr
     - r-purrr
     - r-quantmod >=0.4_13
+    - r-readr
+    - r-riingo
     - r-rlang
     - r-rstudioapi
     - r-stringr
     - r-tibble
     - r-tidyr >=1.0.0
-    - r-timetk
-    - r-xml2
-    - r-xts
-    - r-riingo
-    - r-alphavantager
+    - r-tidyselect
     - r-timedate
-
+    - r-timetk >=2.4.0
+    - r-xts
   run:
     - r-base
     - r-performanceanalytics
     - r-quandl
     - r-ttr
+    - r-alphavantager >=0.1.2
     - r-cli
     - r-crayon
-    - r-dplyr >=0.8.3
+    - r-curl
+    - r-dplyr >=1.0.0
     - r-ggplot2
     - r-httr
+    - r-janitor
     - r-lazyeval
     - r-lubridate
     - r-magrittr
     - r-purrr
     - r-quantmod >=0.4_13
+    - r-readr
+    - r-riingo
     - r-rlang
     - r-rstudioapi
     - r-stringr
     - r-tibble
     - r-tidyr >=1.0.0
-    - r-timetk
-    - r-xml2
-    - r-xts
-    - r-riingo
-    - r-alphavantager
+    - r-tidyselect
     - r-timedate
+    - r-timetk >=2.4.0
+    - r-xts
 
 test:
   commands:
-    # You can put additional test commands to be run here.
     - $R -e "library('tidyquant')"           # [not win]
     - "\"%R%\" -e \"library('tidyquant')\""  # [win]
 
@@ -103,7 +105,6 @@ extra:
     - benhuff
 
 # The original CRAN metadata for this package was:
-
 # Package: tidyquant
 # Type: Package
 # Title: Tidy Quantitative Financial Analysis
@@ -127,7 +128,6 @@ extra:
 # Author: Matt Dancho [aut, cre], Davis Vaughan [aut]
 # Repository: CRAN
 # Date/Publication: 2020-01-27 16:10:02 UTC
-
 # See
 # https://docs.conda.io/projects/conda-build for
 # more information about meta.yaml
