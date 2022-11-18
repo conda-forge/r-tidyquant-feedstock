@@ -1,13 +1,17 @@
 About r-tidyquant
 =================
 
-Home: https://github.com/business-science/tidyquant
+Home: https://business-science.github.io/tidyquant/
 
 Package license: MIT
 
 Feedstock license: [BSD-3-Clause](https://github.com/conda-forge/r-tidyquant-feedstock/blob/main/LICENSE.txt)
 
-Summary: Bringing financial analysis to the 'tidyverse'. The 'tidyquant' package provides a convenient wrapper to various 'xts', 'zoo', 'quantmod', 'TTR' and 'PerformanceAnalytics' package functions and returns the objects in the tidy 'tibble' format. The main advantage is being able to use quantitative functions with the 'tidyverse' functions including 'purrr', 'dplyr', 'tidyr', 'ggplot2', 'lubridate', etc. See the 'tidyquant' website for more information, documentation and examples.
+Summary: Bringing business and financial analysis to the 'tidyverse'. The 'tidyquant' package provides a convenient wrapper to various 'xts', 'zoo', 'quantmod', 'TTR' and 'PerformanceAnalytics' package functions and returns the objects in the tidy 'tibble' format. The main advantage is being able to use quantitative functions with the 'tidyverse' functions including 'purrr', 'dplyr', 'tidyr', 'ggplot2', 'lubridate', etc. See the 'tidyquant' website for more information, documentation and examples.
+
+Development: https://github.com/business-science/tidyquant
+
+Documentation: https://business-science.github.io/tidyquant/reference/index.html
 
 Current build status
 ====================
