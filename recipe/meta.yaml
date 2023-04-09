@@ -23,10 +23,13 @@ build:
 requirements:
   build:
     - {{ posix }}zip               # [win]
+    - cross-r-base {{ r_base }}    # [build_platform != target_platform]
   host:
     - r-base
+    - r-performanceanalytics
+    - r-quandl
+    - r-ttr
     - r-alphavantager >=0.1.2
-    - r-cli
     - r-curl
     - r-dplyr >=1.0.0
     - r-ggplot2
@@ -35,9 +38,7 @@ requirements:
     - r-lazyeval
     - r-lubridate
     - r-magrittr
-    - r-performanceanalytics
     - r-purrr
-    - r-quandl
     - r-quantmod >=0.4_13
     - r-readr
     - r-readxl
@@ -47,14 +48,16 @@ requirements:
     - r-tibble
     - r-tidyr >=1.0.0
     - r-tidyselect
+    - r-tidyverse
     - r-timedate
     - r-timetk >=2.4.0
-    - r-ttr
     - r-xts
-  run:
+ run:
     - r-base
+    - r-performanceanalytics
+    - r-quandl
+    - r-ttr
     - r-alphavantager >=0.1.2
-    - r-cli
     - r-curl
     - r-dplyr >=1.0.0
     - r-ggplot2
@@ -63,9 +66,7 @@ requirements:
     - r-lazyeval
     - r-lubridate
     - r-magrittr
-    - r-performanceanalytics
     - r-purrr
-    - r-quandl
     - r-quantmod >=0.4_13
     - r-readr
     - r-readxl
@@ -75,9 +76,9 @@ requirements:
     - r-tibble
     - r-tidyr >=1.0.0
     - r-tidyselect
+    - r-tidyverse
     - r-timedate
     - r-timetk >=2.4.0
-    - r-ttr
     - r-xts
 
 test:
