@@ -52,7 +52,7 @@ requirements:
     - r-timedate
     - r-timetk >=2.4.0
     - r-xts
- run:
+  run:
     - r-base
     - r-performanceanalytics
     - r-quandl
