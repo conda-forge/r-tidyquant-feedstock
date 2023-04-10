@@ -47,6 +47,7 @@ requirements:
     - r-tibble
     - r-tidyr >=1.0.0
     - r-tidyselect
+    - r-tidyverse
     - r-timedate
     - r-timetk >=2.4.0
     - r-ttr
@@ -75,6 +76,7 @@ requirements:
     - r-tibble
     - r-tidyr >=1.0.0
     - r-tidyselect
+    - r-tidyverse
     - r-timedate
     - r-timetk >=2.4.0
     - r-ttr
