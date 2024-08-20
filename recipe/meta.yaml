@@ -1,6 +1,5 @@
 {% set version = "1.0.8" %}
 {% set posix = 'm2-' if win else '' %}
-{% set native = 'm2w64-' if win else '' %}
 
 package:
   name: r-tidyquant
@@ -13,7 +12,6 @@ source:
   sha256: d47fb6ffb670fe714c2ab81c3e044e3787e6b2baa19232590823de066f48507b
 
 build:
-  merge_build_host: true  # [win]
   number: 0
   noarch: generic
   rpaths:
@@ -27,14 +25,13 @@ requirements:
   host:
     - r-base
     - r-performanceanalytics
-    - r-quandl
     - r-ttr
-    - r-alphavantager >=0.1.2
+    - r-cli
     - r-curl
     - r-dplyr >=1.0.0
-    - r-ggplot2
+    - r-ggplot2 >=3.4.0
     - r-httr
-    - r-jsonlite
+    - r-httr2
     - r-lazyeval
     - r-lubridate
     - r-magrittr
@@ -42,27 +39,24 @@ requirements:
     - r-quantmod >=0.4_13
     - r-readr
     - r-readxl
-    - r-riingo
     - r-rlang
     - r-stringr
     - r-tibble
     - r-tidyr >=1.0.0
-    - r-tidyselect
-    - r-tidyverse
     - r-timedate
     - r-timetk >=2.4.0
     - r-xts
-  run:
+    - r-zoo
+run:
     - r-base
     - r-performanceanalytics
-    - r-quandl
     - r-ttr
-    - r-alphavantager >=0.1.2
+    - r-cli
     - r-curl
     - r-dplyr >=1.0.0
-    - r-ggplot2
+    - r-ggplot2 >=3.4.0
     - r-httr
-    - r-jsonlite
+    - r-httr2
     - r-lazyeval
     - r-lubridate
     - r-magrittr
@@ -70,16 +64,14 @@ requirements:
     - r-quantmod >=0.4_13
     - r-readr
     - r-readxl
-    - r-riingo
     - r-rlang
     - r-stringr
     - r-tibble
     - r-tidyr >=1.0.0
-    - r-tidyselect
-    - r-tidyverse
     - r-timedate
     - r-timetk >=2.4.0
     - r-xts
+    - r-zoo
 
 test:
   commands:
@@ -100,8 +92,8 @@ about:
 
 extra:
   recipe-maintainers:
-    - mxr-conda
     - conda-forge/r
+    - mxr-conda
     - oblute
     - rluria14
     - benhuff
