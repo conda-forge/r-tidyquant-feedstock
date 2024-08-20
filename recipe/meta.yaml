@@ -1,4 +1,4 @@
-{% set version = "1.0.7" %}
+{% set version = "1.0.8" %}
 {% set posix = 'm2-' if win else '' %}
 {% set native = 'm2w64-' if win else '' %}
 
@@ -10,11 +10,11 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyquant_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyquant/tidyquant_{{ version }}.tar.gz
-  sha256: 90641de67eabf1b84b3ea2fdcd282977121a099ec906a894096ea225ba6967dd
+  sha256: d47fb6ffb670fe714c2ab81c3e044e3787e6b2baa19232590823de066f48507b
 
 build:
   merge_build_host: true  # [win]
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
