@@ -47,7 +47,7 @@ requirements:
     - r-timetk >=2.4.0
     - r-xts
     - r-zoo
-run:
+  run:
     - r-base
     - r-performanceanalytics
     - r-ttr
