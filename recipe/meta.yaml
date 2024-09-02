@@ -1,4 +1,4 @@
-{% set version = "1.0.8" %}
+{% set version = "1.0.9" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,7 +9,7 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyquant_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyquant/tidyquant_{{ version }}.tar.gz
-  sha256: d47fb6ffb670fe714c2ab81c3e044e3787e6b2baa19232590823de066f48507b
+  sha256: a7f7226acc688940e290972ff2b6ae4674c410c90c5968d5890514c7b1fe4ab1
 
 build:
   number: 0
