@@ -25,6 +25,7 @@ requirements:
   host:
     - r-base
     - r-performanceanalytics
+    - r-robstattm
     - r-ttr
     - r-cli
     - r-curl
@@ -50,6 +51,7 @@ requirements:
   run:
     - r-base
     - r-performanceanalytics
+    - r-robstattm
     - r-ttr
     - r-cli
     - r-curl
