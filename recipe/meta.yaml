@@ -1,4 +1,4 @@
-{% set version = "1.0.9" %}
+{% set version = "1.0.11" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyquant_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyquant/tidyquant_{{ version }}.tar.gz
-  sha256: a7f7226acc688940e290972ff2b6ae4674c410c90c5968d5890514c7b1fe4ab1
+  sha256: af12e64d6e2ea99549ccafa161d578fd41689517cfe55c91ad8c776afcdfa72d
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -25,6 +25,7 @@ requirements:
   host:
     - r-base
     - r-performanceanalytics
+    - r-robstattm
     - r-ttr
     - r-cli
     - r-curl
@@ -50,6 +51,7 @@ requirements:
   run:
     - r-base
     - r-performanceanalytics
+    - r-robstattm
     - r-ttr
     - r-cli
     - r-curl
