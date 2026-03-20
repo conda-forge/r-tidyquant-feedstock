@@ -1,4 +1,4 @@
-{% set version = "1.0.11" %}
+{% set version = "1.0.12" %}
 {% set posix = 'm2-' if win else '' %}
 
 package:
@@ -9,10 +9,10 @@ source:
   url:
     - {{ cran_mirror }}/src/contrib/tidyquant_{{ version }}.tar.gz
     - {{ cran_mirror }}/src/contrib/Archive/tidyquant/tidyquant_{{ version }}.tar.gz
-  sha256: af12e64d6e2ea99549ccafa161d578fd41689517cfe55c91ad8c776afcdfa72d
+  sha256: aa129971b84ca0f99ce745b039e94dce67a67aa7c49f811cbfb398c4b3a1f99f
 
 build:
-  number: 1
+  number: 0
   noarch: generic
   rpaths:
     - lib/R/lib/
@@ -85,8 +85,8 @@ about:
   dev_url: https://github.com/business-science/tidyquant
   doc_url: https://business-science.github.io/tidyquant/reference/index.html
   license: MIT
-  summary: Bringing business and financial analysis to the 'tidyverse'. The 'tidyquant' package provides a convenient wrapper to various 'xts', 'zoo', 'quantmod', 'TTR' and 'PerformanceAnalytics' package functions and returns the objects in the tidy 'tibble' format. The main advantage is being able to use quantitative functions
-    with the 'tidyverse' functions including 'purrr', 'dplyr', 'tidyr', 'ggplot2', 'lubridate', etc. See the 'tidyquant' website for more information, documentation and examples.
+  summary: Bringing business and financial analysis to the 'tidyverse'. The 'tidyquant' package provides a convenient wrapper to various 'xts', 'zoo', 'quantmod', 'TTR' and 'PerformanceAnalytics' package functions and returns the objects in the tidy 'tibble' format. The main advantage is being able to use quantitative 
+    functions with the 'tidyverse' functions including 'purrr', 'dplyr', 'tidyr', 'ggplot2', 'lubridate', etc. See the 'tidyquant' website for more information, documentation and examples.
   license_family: MIT
   license_file:
     - {{ environ["PREFIX"] }}/lib/R/share/licenses/MIT
